@@ -1,0 +1,31 @@
+body {
+    text-align: center;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.header-wrapper {
+    margin: 5px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.header-wrapper > * {
+    margin: 0px;
+}
+
+#lives {
+    position: absolute;
+    left: 46%;
+    top: 50px;
+}
+
+#hard-mode {
+    display: none;
+    position: absolute;
+    font-family: sans-serif;
+    color: #ff0000;
+    bottom: 0px;
+    left: 0px;
+}
