@@ -73,17 +73,19 @@ const jsToDist = () => {
 }
 gulp.task('jsToDist', jsToDist);
 
+/**
+ * @function indexHTMLToDist
+ * @param gulp Build tool - for handle the file system, powered by Node.js
+ * @description Just copies index.html file to ./dist/ dir for use
+ * 
+ */
 const indexHTMLToDist = () => {
   return gulp.src('./src/index.html')
   .pipe(gulp.dest('./dist/'));
 }
 gulp.task('indexHTMLToDist', indexHTMLToDist);
 
-gulp.task('default', () => {
-  cssToDist();
-  imgToDist();
-  jsToDist();
-  indexHTMLToDist();
+gulp.task('default', ['cssToDist','imgToDist','jsToDist','indexHTMLToDist'], () => {
   gulp.watch('./src/css/*.css', ['cssToDist']);
   gulp.watch('./src/js/*.js', ['jsToDist']);
   gulp.watch('./src/index.html', ['indexHTMLToDist']);

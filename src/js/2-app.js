@@ -141,7 +141,7 @@ class Enemy {
      * The image/sprite for our enemies, this uses
      * a helper we've provided to easily load images
     */
-    this.sprite = `images/${enemyType}.png`;
+    this.sprite = `./images/${enemyType}.png`;
     this.name = "BUG";
 
     /**
@@ -202,7 +202,7 @@ class Enemy {
 */
 class Player {
   constructor(char, name) {
-    this.sprite = `images/${char}.png`;
+    this.sprite = `./images/${char}.png`;
     this.name = name;
     this.lives = 3;
     this.x = startingXAxis;
