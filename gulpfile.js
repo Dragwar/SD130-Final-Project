@@ -67,7 +67,7 @@ gulp.task('cssToDist', cssToDist);
 const jsToDist = () => {
   return gulp.src('./src/js/*.js')
     .pipe(babel({presets:['@babel/env']}))
-    .pipe(concat('all.js'))
+    .pipe(concat('main.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./dist/js/'));
 }
