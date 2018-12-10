@@ -79,11 +79,7 @@ const indexHTMLToDist = () => {
 }
 gulp.task('indexHTMLToDist', indexHTMLToDist);
 
-gulp.task('default', () => {
-  cssToDist();
-  imgToDist();
-  jsToDist();
-  indexHTMLToDist();
+gulp.task('default', ['cssToDist','imgToDist','jsToDist','indexHTMLToDist'], () => {
   gulp.watch('./src/css/*.css', ['cssToDist']);
   gulp.watch('./src/js/*.js', ['jsToDist']);
   gulp.watch('./src/index.html', ['indexHTMLToDist']);
