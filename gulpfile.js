@@ -73,12 +73,18 @@ const jsToDist = () => {
 }
 gulp.task('jsToDist', jsToDist);
 
+const indexHTMLToDist = () => {
+  return gulp.src('./src/index.html')
+  .pipe(gulp.dest('./dist/'));
+}
+gulp.task('indexHTMLToDist', indexHTMLToDist);
 
 gulp.task('default', () => {
   cssToDist();
   imgToDist();
   jsToDist();
-  gulp.src('./src/index.html')
-  .pipe(gulp.dest('./dist/'));
+  indexHTMLToDist();
   gulp.watch('./src/css/*.css', ['cssToDist']);
+  gulp.watch('./src/js/*.js', ['jsToDist']);
+  gulp.watch('./src/index.html', ['indexHTMLToDist']);
 });
