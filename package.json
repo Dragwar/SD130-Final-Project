@@ -1,0 +1,32 @@
+{
+  "name": "everett-grassler-final-project",
+  "version": "1.0.0",
+  "description": "cloned SD120 frogger clone",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dragwar/SD-120-Frogger-Clone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dragwar/SD-120-Frogger-Clone/issues"
+  },
+  "homepage": "https://github.com/Dragwar/SD-120-Frogger-Clone#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-uglify": "^3.0.1",
+    "@babel/polyfill": "^7.0.0"
+  }
+}
